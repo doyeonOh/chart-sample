@@ -1,0 +1,125 @@
+<div>
+  <h1>Javascript Chart Library</h1>
+</div>
+<table id="chartSummary">
+  <colgroup>
+    <col width="10%" />
+    <col width="30%" />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+    <col />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Feature</th>
+      <!-- <th>성능</th> -->
+      <th>Responsive</th>
+      <th>Element</th>
+      <th>License</th>
+      <th>Documentation</th>
+      <th>Line</th>
+      <th>Bar</th>
+      <th>Area</th>
+      <th>Pie</th>
+      <th>Donut</th>
+      <th>Scatter</th>
+      <th>Heatmap</th>
+      <th>Radar</th>
+      <th>Bubble</th>
+      <th>Tree</th>
+      <th>Gauge</th>
+      <th>Etc</th>
+      <th>Link</th>
+      <th>Demo</th>
+    </tr>
+    <ng-template ngFor let-chart [ngForOf]="chartList">
+      <tr>
+        <td>{{ chart.name }}</td>
+        <td>
+          <ng-template ngFor let-feature [ngForOf]="chart.featureList">
+            <div>
+              - {{ feature }}
+            </div>
+          </ng-template>
+        </td>
+        <!-- <td>{{ chart.performance }}</td> -->
+        <td>{{ chart.responsive }}</td>
+        <td>{{ chart.svgOrCanvas }}</td>
+        <td>{{ chart.license }}</td>
+        <td>{{ chart.documentation }}</td>
+        <td [style.backgroundColor]="chart.hasLine ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasBar ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasArea ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasPie ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasDonut ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasScatter ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasHeatmap ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasRadar ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasBubble ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasTree ? 'green' : 'red' "></td>
+        <td [style.backgroundColor]="chart.hasGauge ? 'green' : 'red' "></td>
+        <td>{{ chart.etc }}</td>
+        <td><a target="_blank" [href]="chart.link">Link</a></td>
+        <td><a target="_blank" [href]="chart.demo">Demo</a></td>
+      </tr>  
+    </ng-template>
+  </tbody>
+</table>
+
+<div style="margin-top:10px;">
+  <h1>Javascript Word Cloud Library</h1>
+</div>
+<table id="wordCloudSummary">
+  <colgroup>
+    <col width="10%" />
+    <col width="30%" />
+    <col />
+    <col />
+    <col />
+    <col />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <th>Feature</th>
+      <th>License</th>
+      <th>Element</th>
+      <th>Link</th>
+      <th>Demo</th>
+    </tr>
+    <ng-template ngFor let-wc [ngForOf]="wordCloudList">
+      <tr>
+        <td>{{ wc.name }}</td>
+        <td>
+          <ng-template ngFor let-feature [ngForOf]="wc.featureList">
+            <div>
+              - {{ feature }}
+            </div>
+          </ng-template>
+        </td>
+        <td>{{ wc.license }}</td>
+        <td>{{ wc.svgOrCanvas }}</td>
+        <td><a target="_blank" [href]="wc.link">Link</a></td>
+        <td><a target="_blank" [href]="wc.demo">Demo</a></td>
+      </tr>  
+    </ng-template>
+  </tbody>
+</table>
